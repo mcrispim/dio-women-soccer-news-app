@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Women Soccer News</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_noticias">Notícias</string>
+    <string name="title_favoritos">Favoritos</string>
 </resources>
