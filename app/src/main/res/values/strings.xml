@@ -2,4 +2,6 @@
     <string name="app_name">Women Soccer News</string>
     <string name="title_noticias">Notícias</string>
     <string name="title_favoritos">Favoritos</string>
+    <string name="imagem_relacionada_noticia">Imagem relacionada à notícia.</string>
+    <string name="link_para_a_noticia">Link para a notícia</string>
 </resources>
