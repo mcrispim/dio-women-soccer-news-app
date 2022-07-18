@@ -6,8 +6,15 @@ import androidx.lifecycle.ViewModel
 
 class NoticiasViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "Este é o fragmento Notícias"
+    private val _noticias = MutableLiveData<List<Noticia>>().apply {
+
+        // Remover mock de notícias
+        value = listOf(
+            Noticia("Título 1", "Texto 1"),
+            Noticia("Título 2", "Texto 2"),
+            Noticia("Título 3", "Texto 3"),
+            Noticia("Título 4", "Texto 4")
+        )
     }
-    val text: LiveData<String> = _text
+    val listaNoticias: LiveData<List<Noticia>> = _noticias
 }
