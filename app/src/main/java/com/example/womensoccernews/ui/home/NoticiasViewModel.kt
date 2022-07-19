@@ -3,18 +3,41 @@ package com.example.womensoccernews.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.womensoccernews.data.remote.NoticiasApi
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 
 class NoticiasViewModel : ViewModel() {
+    val listaNoticias = MutableLiveData<List<Noticia>>()
 
-    private val _noticias = MutableLiveData<List<Noticia>>().apply {
+    var retrofit = Retrofit.Builder()
+        .baseUrl("https://mcrispim.github.io/dio-women-soccer-news-api/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+    var api: NoticiasApi = retrofit.create(NoticiasApi::class.java)
 
-        // Remover mock de notícias
-        value = listOf(
-            Noticia("Título 1", "Texto 1"),
-            Noticia("Título 2", "Texto 2"),
-            Noticia("Título 3", "Texto 3"),
-            Noticia("Título 4", "Texto 4")
-        )
+    init {
+        getNoticias()
     }
-    val listaNoticias: LiveData<List<Noticia>> = _noticias
+
+    private fun getNoticias() {
+        api.getNoticias().enqueue(object : Callback<List<Noticia>> {
+            override fun onResponse(call: Call<List<Noticia>>, response: Response<List<Noticia>>) {
+                if (response.isSuccessful) {
+                    listaNoticias.value = response.body()
+                } else {
+                    TODO("Not yet implemented")
+                }
+            }
+
+            override fun onFailure(call: Call<List<Noticia>>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
+
 }
