@@ -13,7 +13,8 @@
 
         <ImageView
             android:id="@+id/ivImagem"
-            android:layout_width="0dp"
+            android:padding="@dimen/default_half_margin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +24,7 @@
 
         <TextView
             android:id="@+id/tvTitulo"
+            android:paddingHorizontal="@dimen/default_half_margin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin"
@@ -34,6 +36,7 @@
 
         <TextView
             android:id="@+id/tvTexto"
+            android:paddingHorizontal="@dimen/default_half_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/default_margin"

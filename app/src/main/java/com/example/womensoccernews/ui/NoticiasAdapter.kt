@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.womensoccernews.databinding.NoticiaItemBinding
 import com.example.womensoccernews.ui.home.Noticia
+import com.squareup.picasso.Picasso
 
 class NoticiasAdapter(val listaNoticias: List<Noticia>): RecyclerView.Adapter<NoticiasAdapter.NoticiaViewHolder>() {
 
@@ -16,6 +17,9 @@ class NoticiasAdapter(val listaNoticias: List<Noticia>): RecyclerView.Adapter<No
 
         override fun onBindViewHolder(holder: NoticiaViewHolder, position: Int) {
                 val noticia = listaNoticias[position]
+                Picasso.get()
+                        .load(noticia.imagem)
+                        .into(holder.binding.ivImagem);
                 holder.binding.tvTitulo.text = noticia.titulo
                 holder.binding.tvTexto.text = noticia.texto
         }
