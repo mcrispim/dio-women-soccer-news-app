@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_noticias"
-        android:name="com.example.womensoccernews.ui.home.NoticiasFragment"
+        android:name="com.example.womensoccernews.ui.noticias.NoticiasFragment"
         android:label="@string/title_noticias"
         tools:layout="@layout/fragment_noticias" />
 

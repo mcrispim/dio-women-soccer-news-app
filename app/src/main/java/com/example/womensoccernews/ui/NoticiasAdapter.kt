@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.womensoccernews.databinding.NoticiaItemBinding
-import com.example.womensoccernews.ui.home.Noticia
+import com.example.womensoccernews.ui.noticias.Noticia
 import com.squareup.picasso.Picasso
 
 class NoticiasAdapter(private val listaNoticias: List<Noticia>): RecyclerView.Adapter<NoticiasAdapter.NoticiaViewHolder>() {

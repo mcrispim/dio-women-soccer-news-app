@@ -1,6 +1,5 @@
-package com.example.womensoccernews.ui.home
+package com.example.womensoccernews.ui.noticias
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.womensoccernews.data.remote.NoticiasApi
