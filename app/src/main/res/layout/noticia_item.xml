@@ -62,6 +62,7 @@
 
         <ImageView
             android:id="@+id/ivFavorito"
+            android:contentDescription="@string/imagem_do_bot_o_favorito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/default_margin"
@@ -76,6 +77,7 @@
 
         <ImageView
             android:id="@+id/ivShare"
+            android:contentDescription="@string/imagem_do_bot_o_compartilhar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/default_margin"

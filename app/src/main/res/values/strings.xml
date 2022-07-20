@@ -4,4 +4,6 @@
     <string name="title_favoritos">Favoritos</string>
     <string name="imagem_relacionada_noticia">Imagem relacionada à notícia.</string>
     <string name="link_para_a_noticia">Link para a notícia</string>
+    <string name="imagem_do_bot_o_favorito">Imagem do botão \'Favorito\'</string>
+    <string name="imagem_do_bot_o_compartilhar">Imagem do botão \'Compartilhar\'</string>
 </resources>
