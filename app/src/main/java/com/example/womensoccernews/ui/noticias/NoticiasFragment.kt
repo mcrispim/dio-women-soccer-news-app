@@ -33,7 +33,10 @@ class NoticiasFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(this.context)
 
         homeViewModel.listaNoticias.observe(viewLifecycleOwner) { listaNoticias ->
-            recyclerView.adapter = NoticiasAdapter(listaNoticias)
+            recyclerView.adapter = NoticiasAdapter(listaNoticias) {
+
+                // TODO
+            }
         }
 
         return root
