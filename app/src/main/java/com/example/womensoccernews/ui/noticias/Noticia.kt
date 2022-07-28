@@ -11,5 +11,5 @@ data class Noticia(
     val texto: String,
     val imagem: String,
     val link: String,
-    var isFavorite: Boolean
+    var isFavorite: Boolean = false
 )

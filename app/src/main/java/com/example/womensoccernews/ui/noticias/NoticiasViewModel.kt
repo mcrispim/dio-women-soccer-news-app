@@ -2,6 +2,9 @@ package com.example.womensoccernews.ui.noticias
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.womensoccernews.NoticiasApplication
+import com.example.womensoccernews.data.local.NoticiasDao
+import com.example.womensoccernews.data.local.NoticiasDb
 import com.example.womensoccernews.data.remote.NoticiasApi
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,11 +22,17 @@ class NoticiasViewModel : ViewModel() {
         .build()
     var api: NoticiasApi = retrofit.create(NoticiasApi::class.java)
 
+    private var noticiasDao = NoticiasDb
+        .getDaoInstance(
+            NoticiasApplication.getAppContext()
+        )
+
     init {
-        getNoticias()
+        getRemoteNoticias()
+        noticiasDao.addAllNoticias(listaNoticias.value ?: emptyList())
     }
 
-    private fun getNoticias() {
+    private fun getRemoteNoticias() {
         api.getNoticias().enqueue(object : Callback<List<Noticia>> {
             override fun onResponse(call: Call<List<Noticia>>, response: Response<List<Noticia>>) {
                 if (response.isSuccessful) {
