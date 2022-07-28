@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">dio-women-soccer-news-app</string>
+    <string name="title_news">News</string>
+    <string name="title_favorites">Favoritos</string>
+</resources>
